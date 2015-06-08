@@ -88,8 +88,6 @@ p.subtitle {
 }
 div.info {
 	font-weight: lighter;
-	//text-indent: 32px;
-	//text-align: left;
 	margin: 3% auto;
 	width: 70%;
 }
@@ -110,17 +108,18 @@ div.noshow {
 }
 </style>
 <script src="jquery.min.js"></script>
+<script src="unveil.js"></script>
 </head>
 <body>
 	<!-- background image group -->
 	<div class="bg noshow" id="b0" style="background: url('0.jpg')"></div>
-	<div class="bg noshow" id="b1" style="background: url('1.jpg')"></div>
-	<div class="bg noshow" id="b2" style="background: url('2.jpg')"></div>
-	<div class="bg noshow" id="b3" style="background: url('3.jpg')"></div>
-	<div class="bg noshow" id="b4" style="background: url('4.jpg')"></div>
-	<div class="bg noshow" id="b5" style="background: url('5.jpg')"></div>
-	<div class="bg noshow" id="b6" style="background: url('6.jpg')"></div>
-	<div class="bg noshow" id="b7" style="background: url('7.jpg')"></div>
+	<div class="bg noshow" id="b1" style=""></div>
+	<div class="bg noshow" id="b2" style=""></div>
+	<div class="bg noshow" id="b3" style=""></div>
+	<div class="bg noshow" id="b4" style=""></div>
+	<div class="bg noshow" id="b5" style=""></div>
+	<div class="bg noshow" id="b6" style=""></div>
+	<div class="bg noshow" id="b7" style=""></div>
 	<!-- navigation buttons -->
 	<div class="nav">
 		<span data-target="0" class="on">聚隆</span>
@@ -158,14 +157,14 @@ div.noshow {
 				<p>公司经常开展各种形式的文艺活动，既丰富了员工的文化生活，又增强了员工的凝聚力，处处体现公司与员工的和谐和温暖。</p><br/>
 
 				<img src="culture/0.jpg" />
-				<img src="culture/1.jpg" />
-				<img src="culture/2.jpg" />
-				<img src="culture/3.jpg" />
-				<img src="culture/4.jpg" />
-				<img src="culture/5.jpg" />
-				<img src="culture/6.jpg" />
-				<img src="culture/7.jpg" />
-				<img src="culture/8.jpg" />
+				<img data-src="culture/1.jpg" />
+				<img data-src="culture/2.jpg" />
+				<img data-src="culture/3.jpg" />
+				<img data-src="culture/4.jpg" />
+				<img data-src="culture/5.jpg" />
+				<img data-src="culture/6.jpg" />
+				<img data-src="culture/7.jpg" />
+				<img data-src="culture/8.jpg" />
 			</div>
 		</div>
 		<!--section 2-->
@@ -179,27 +178,27 @@ div.noshow {
 			    <p>公司配备德国罗兰四色彩印机、05对开彩色印刷机、01对开单色机、光华4开单色机、票据机等一流印刷设备，可印制宣传彩页、 精美画册、手提袋、包装彩盒、台历、挂历、书刊、杂志、封套票袋、不干胶等。</p><br/>
 
 				<img src="print/0.jpg" />
-				<img src="print/1.jpg" />
-				<img src="print/2.jpg" />
-				<img src="print/3.jpg" />
-				<img src="print/4.jpg" />
-				<img src="print/5.jpg" />
-				<img src="print/6.jpg" />
-				<img src="print/7.jpg" />
-				<img src="print/8.jpg" />
-				<img src="print/9.jpg" />
-				<img src="print/10.jpg" />
+				<img data-src="print/1.jpg" />
+				<img data-src="print/2.jpg" />
+				<img data-src="print/3.jpg" />
+				<img data-src="print/4.jpg" />
+				<img data-src="print/5.jpg" />
+				<img data-src="print/6.jpg" />
+				<img data-src="print/7.jpg" />
+				<img data-src="print/8.jpg" />
+				<img data-src="print/9.jpg" />
+				<img data-src="print/10.jpg" />
 
 				<br/> <br/> <br/>
 
 				<p class="subtitle" style="opacity:1">装订车间</p>
 			    <p>装订车间配备胶包机、折页机、三面切、锁线机、多头订书机等，保证了全厂的产品均由本厂独立完成，为提高公司的产品质量，缩短印制周期，适应市场需求提供强有力的保障。</p><br/>
 
-				<img src="booking/0.jpg" />
-				<img src="booking/1.jpg" />
-				<img src="booking/2.jpg" />
-				<img src="booking/3.jpg" />
-				<img src="booking/4.jpg" />
+				<img data-src="booking/0.jpg" />
+				<img data-src="booking/1.jpg" />
+				<img data-src="booking/2.jpg" />
+				<img data-src="booking/3.jpg" />
+				<img data-src="booking/4.jpg" />
 
 			</div>
 		</div>
@@ -214,10 +213,10 @@ div.noshow {
 			    <br/> <br/>
 				<p class="subtitle">部分案例</p>
 				<img src="ad/0.jpg" />
-				<img src="ad/1.jpg" />
-				<img src="ad/2.jpg" />
-				<img src="ad/3.jpg" />
-				<img src="ad/4.jpg" />
+				<img data-src="ad/1.jpg" />
+				<img data-src="ad/2.jpg" />
+				<img data-src="ad/3.jpg" />
+				<img data-src="ad/4.jpg" />
 			</div>
 		</div>
 		<!--section 4-->
@@ -228,11 +227,11 @@ div.noshow {
 			<div class="info">
 				<p class="subtitle"> 广东品牌办公家俱代理 </p>
 				<img src="furniture/0.jpg" />
-				<img src="furniture/1.jpg" />
-				<img src="furniture/2.jpg" />
-				<img src="furniture/3.jpg" />
-				<img src="furniture/4.jpg" />
-				<img src="furniture/5.jpg" />
+				<img data-src="furniture/1.jpg" />
+				<img data-src="furniture/2.jpg" />
+				<img data-src="furniture/3.jpg" />
+				<img data-src="furniture/4.jpg" />
+				<img data-src="furniture/5.jpg" />
 			</div>
 		</div>
 		<!--section 5-->
@@ -243,9 +242,9 @@ div.noshow {
 			<div class="info">
 				<p>文化用品超市经营范围较广，主要经营办公用品、学生用品、工艺品、印制品等。</p>
 				<img src="market/0.jpg" />
-				<img src="market/1.jpg" />
-				<img src="market/2.jpg" />
-				<img src="market/3.jpg" />
+				<img data-src="market/1.jpg" />
+				<img data-src="market/2.jpg" />
+				<img data-src="market/3.jpg" />
 			</div>
 		</div>
 		<!--section 6-->
@@ -278,6 +277,15 @@ div.noshow {
 	<script>
 var lastIndex = 0;
 $(document).ready(function() {
+	window.setTimeout(function () {
+		console.log('start');
+		var i;
+		for (i = 1; i<=7 ;i++) {
+			console.log("url('"+i+".jpg)'");
+			document.getElementById('b' + i).style.backgroundImage = "url('"+i+".jpg')";
+		}
+	}, 2000);
+	$("img").unveil();
 	var changeTab = function (newIndex) {
 		if (newIndex == lastIndex) return;
 		//highlight tab
