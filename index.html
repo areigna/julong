@@ -1,98 +1,318 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
-	<title></title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>聚隆印刷广告有限公司</title>
 <style>
 body {
 	text-align: center;
-	background: url('fugu.jpg');
-	background-size: cover;
 	color: white;
+	margin: 0;
+	padding: 0;
+	background: black;
+	font-family: helvetica,'STHeiti';
 }
-img.bg {
+.song {
+	font-family: 'Songti SC BLACK';
+}
+div.bg {
 	width: 100%;
-	position:absolute;
+	height: 100%;
+	position:fixed;
 	top: 0 ; left: 0;
 	z-index: -1;
+	background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 p {
 	margin: 0;
+	line-height: 150%;
 }
 div#backdrop {
 	position:relative;
-	background-color: rgba(0,0,0,0.38);
-	margin: 3% auto 0 auto;
-	width: 68%;
-	padding: 3%;
+	background-color: rgba(0,0,0,0.58);
+	padding: 3% 0;
+	margin: 0 auto;
+	width: 80%;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
 }
+@media (max-width: 600px) {
+	div#backdrop {
+		width: 95%;
+		padding: 1% 0;
+	}
+	div.info {
+		margin: 3% auto;
+		width: 95%;
+	}
+}
+div#backdrop .content{}
+
 div.nav {
-	font-family: 'LiHei Pro';
+	width: 100%;
+	overflow-x: scroll;
+	white-space: nowrap;
+	padding: 5% 0;
+	-webkit-overflow-scrolling: touch;
 }
 div.nav span{
-	margin: 0 3% 0 3%;
+	margin: 0 2%;
 	opacity: 0.6;
 	cursor: pointer;
+	font-size: 120%;
+}
+div.nav span.on{
+	opacity: 1;
+	font-weight: bolder;
 }
 div.nav span:hover{
 	opacity: 1;
 }
 p.title {
-	font-size: 88px ;
+	font-size: 60px ;
 	font-weight: bolder;
 	line-height: 110%;
-	margin: 8% auto 0 auto;
+	margin: 3% auto 0 auto;
 	text-align:center;
 }
 p.subtitle {
 	font-size: 20px;
 	opacity: 0.68;
-	font-family: 'STHeiti';
+	margin-bottom: 3%;
 }
 div.info {
 	font-weight: lighter;
-	font-family: 'STHeiti';
-	text-indent: 32px;
+	//text-indent: 32px;
 	//text-align: left;
-	margin: 8% auto 8% auto;
+	margin: 3% auto;
 	width: 70%;
 }
+div.info img{
+	width: 80%;
+	margin: 5%;
+}
 div.copyright {
-	font-size: 10px;
-	position: absolute;
-	bottom: 2%;
-	width: 94%;
-	font-family: 'STHeiti';
-	opacity: 0.68;
+	margin: 2% 0;
+	font-size: 12px;
+	width: 100%;
+}
+a {
+	color: white;
+}
+div.noshow {
+	display:none;
 }
 </style>
+<script src="jquery.min.js"></script>
 </head>
 <body>
-	<!--
-	<img src="bg.png" class="bg"/>
-	-->
-	<div id="backdrop">
-		<div class="nav">
-			<span>概念</span>
-			<span>广告</span>
-			<span>产品</span>
-			<span>关于</span>
+	<!-- background image group -->
+	<div class="bg noshow" id="b0" style="background: url('0.jpg')"></div>
+	<div class="bg noshow" id="b1" style="background: url('1.jpg')"></div>
+	<div class="bg noshow" id="b2" style="background: url('2.jpg')"></div>
+	<div class="bg noshow" id="b3" style="background: url('3.jpg')"></div>
+	<div class="bg noshow" id="b4" style="background: url('4.jpg')"></div>
+	<div class="bg noshow" id="b5" style="background: url('5.jpg')"></div>
+	<div class="bg noshow" id="b6" style="background: url('6.jpg')"></div>
+	<div class="bg noshow" id="b7" style="background: url('7.jpg')"></div>
+	<!-- navigation buttons -->
+	<div class="nav">
+		<span data-target="0" class="on">聚隆</span>
+		<span data-target="1">企业文化</span>
+		<span data-target="2">印刷</span>
+		<span data-target="3">广告</span>
+		<span data-target="4">办公家具</span>
+		<span data-target="5">办公超市</span>
+		<span data-target="6">煤炭</span>
+		<span data-target="7">水务</span>
+	</div>
+	<div id="backdrop" class="noshow">
+		<!--section 0-->
+		<div id="s0" class="content">
+			<div>
+				<p class="title song" style="font-size:80px"> 聚隆 </p>
+				<p class="subtitle">印刷广告有限公司</p>
+			</div>
+			<div class="info">
+				<p>府谷县聚隆印刷广告有限公司成立于  1991年，是晋陕蒙毗邻地区规模最大、实力雄厚的一家现代印刷、广告企业。</p> <br/>
+				<p>公司成立以来，  本着“诚信优质，  高效满意”的服务理念，  坚持以“先进技术、高效管理、优质服务”的服务宗旨为广大用户提供服务。</p> <br/>
+				<p>坚持抓 “质量、价格、服务、信誉”四大基本点，认真对待每位客户，珍惜每一次合作机会。</p> <br/>
+				<p>坚持用最先进的设备和一丝不苟的工作态度保证质量，赢得客户青睐，在业内享有良好的口碑。</p>
+			</div>
 		</div>
-		<div>
-			<p class="title"> 聚隆 </p>
-			<p class="subtitle">印刷广告有限公司</p>
+		<!--section 1-->
+		<div id="s1" class="content noshow">
+			<div>
+				<p class="title"> 企业文化 </p>
+				<p class="subtitle">弘扬企业文化    提升员工素质    打造一流企业</p>
+			</div>
+			<div class="info">
+				<p>近年来，聚隆印刷广告有限责任公司把企业文化建设这种“软实力”在企业发展过程中的重要性和推动作用作为重点，通过树先进典型、权威宣讲、外出参观学习、文体活动、引进新人新文化、开展互评活动及创办企业报刊等，在这些活动中，把企业文化的价值观贯穿进行。</p><br/>
+				<p>公司定期邀请专业管理讲师对员工进行业务和技能培训。通过学习实践，提高员工对公司文化理念的认同感，充分调动了全体员工对工作的积极性和对公司的热情。</p><br/>
+				<p>公司经常开展各种形式的文艺活动，既丰富了员工的文化生活，又增强了员工的凝聚力，处处体现公司与员工的和谐和温暖。</p><br/>
+
+				<img src="culture/0.jpg" />
+				<img src="culture/1.jpg" />
+				<img src="culture/2.jpg" />
+				<img src="culture/3.jpg" />
+				<img src="culture/4.jpg" />
+				<img src="culture/5.jpg" />
+				<img src="culture/6.jpg" />
+				<img src="culture/7.jpg" />
+				<img src="culture/8.jpg" />
+			</div>
 		</div>
-		<div class="info">
-			<p>府谷县聚隆印刷广告有限公司成立于  1991年，是晋陕蒙毗邻地区规模最大、实力雄厚的一家现代印刷、广告企业。</p>
-			<br/>
-			<p>公司成立以来，  本着“诚信优质，  高效满意”的服务理念，  坚持以“先进技术、高效管理、优质服务”的服务宗旨为广大用户提供服务。</p>
-			<br/>
-			<p>坚持抓 “质量、价格、服务、信誉”四大基本点，认真对待每位客户，珍惜每一次合作机会。</p>
-			<br/>
-			<p>坚持用最先进的设备和一丝不苟的工作态度保证质量，赢得客户青睐，在业内享有良好的口碑。</p>
+		<!--section 2-->
+		<div id="s2" class="content noshow">
+			<div>
+				<p class="title"> 印刷 </p>
+			</div>
+			<div class="info">
+				<p class="subtitle" style="opacity:1">印刷车间</p>
+			    <p>印刷车间以质量为根本，创造优良精品，重视绩效管理，选拨优秀人才，发挥团队精神，树立了良好的声誉，得到广大顾客的信赖。</p><br/>
+			    <p>公司配备德国罗兰四色彩印机、05对开彩色印刷机、01对开单色机、光华4开单色机、票据机等一流印刷设备，可印制宣传彩页、 精美画册、手提袋、包装彩盒、台历、挂历、书刊、杂志、封套票袋、不干胶等。</p><br/>
+
+				<img src="print/0.jpg" />
+				<img src="print/1.jpg" />
+				<img src="print/2.jpg" />
+				<img src="print/3.jpg" />
+				<img src="print/4.jpg" />
+				<img src="print/5.jpg" />
+				<img src="print/6.jpg" />
+				<img src="print/7.jpg" />
+				<img src="print/8.jpg" />
+				<img src="print/9.jpg" />
+				<img src="print/10.jpg" />
+
+				<br/> <br/> <br/>
+
+				<p class="subtitle" style="opacity:1">装订车间</p>
+			    <p>装订车间配备胶包机、折页机、三面切、锁线机、多头订书机等，保证了全厂的产品均由本厂独立完成，为提高公司的产品质量，缩短印制周期，适应市场需求提供强有力的保障。</p><br/>
+
+				<img src="booking/0.jpg" />
+				<img src="booking/1.jpg" />
+				<img src="booking/2.jpg" />
+				<img src="booking/3.jpg" />
+				<img src="booking/4.jpg" />
+
+			</div>
 		</div>
-		<div class="copyright">
-			版权所有 聚隆有限公司 2015
+		<!--section 3-->
+		<div id="s3" class="content noshow">
+			<div>
+				<p class="title"> 广告 </p>
+			</div>
+			<div class="info">
+				<p>聚隆广告是一家集策划、设计、制作、喷绘写真等综合性业务为主的广告公司。公司专业设计高档画册、台历、挂历、宣传页、手提袋、杂志报刊、海报、企业VI形象设计、LOGO设计、包装设计、书籍装帧及承揽户外广告、亮化工程、礼仪庆典策划、条幅锦旗制作、气模气球租赁、墙体车体广告、  路灯路牌广告、  牌匾制作安装、 铜牌铜字霓虹灯、 标牌警示牌制作、  吸塑门头制作等业务。</p><br/>
+			    <p>公司注重与客户紧密沟通，为客户提供优质服务。 始终从市场的角度和客户需求出发，坚持“量身设计”，以“客户满意”为最终目标。</p>
+			    <br/> <br/>
+				<p class="subtitle">部分案例</p>
+				<img src="ad/0.jpg" />
+				<img src="ad/1.jpg" />
+				<img src="ad/2.jpg" />
+				<img src="ad/3.jpg" />
+				<img src="ad/4.jpg" />
+			</div>
+		</div>
+		<!--section 4-->
+		<div id="s4" class="content noshow">
+			<div>
+				<p class="title"> 办公家具 </p>
+			</div>
+			<div class="info">
+				<p class="subtitle"> 广东品牌办公家俱代理 </p>
+				<img src="furniture/0.jpg" />
+				<img src="furniture/1.jpg" />
+				<img src="furniture/2.jpg" />
+				<img src="furniture/3.jpg" />
+				<img src="furniture/4.jpg" />
+				<img src="furniture/5.jpg" />
+			</div>
+		</div>
+		<!--section 5-->
+		<div id="s5" class="content noshow">
+			<div>
+				<p class="title"> 办公超市 </p>
+			</div>
+			<div class="info">
+				<p>文化用品超市经营范围较广，主要经营办公用品、学生用品、工艺品、印制品等。</p>
+				<img src="market/0.jpg" />
+				<img src="market/1.jpg" />
+				<img src="market/2.jpg" />
+				<img src="market/3.jpg" />
+			</div>
+		</div>
+		<!--section 6-->
+		<div id="s6" class="content noshow">
+			<div>
+				<p class="title"> 煤炭 </p>
+			</div>
+			<div class="info">
+			</div>
+		</div>
+		<!--section 7-->
+		<div id="s7" class="content noshow">
+			<div>
+				<p class="title"> 水务 </p>
+			</div>
+			<div class="info">
+			</div>
 		</div>
 	</div>
+	<!-- copyright -->
+	<div class="copyright noshow">
+		府谷县人民西路府州大厦院内 T: 8713845 8722881 F: 8713889 <a href="mailto:fugujl@163.com">fugujl@163.com</a>
+		<br/>
+		版权所有 聚隆有限公司 2015
+		<!--
+		<br/>
+		地址:府谷县人民西路府州大厦院内
+		-->
+	</div>
+	<script>
+var lastIndex = 0;
+$(document).ready(function() {
+	var changeTab = function (newIndex) {
+		if (newIndex == lastIndex) return;
+		//highlight tab
+		$('.nav [data-target='+lastIndex+']').removeClass('on');
+		$('.nav [data-target='+newIndex+']').addClass('on');
+		//change background
+		$('#b' + lastIndex).fadeOut(300,'linear', function () {
+			$('#b' + newIndex).fadeIn(888,'linear');
+		});
+		//change content
+		$('#s' + lastIndex).fadeOut(300,'linear', function () {
+			$('#s' + newIndex).fadeIn(888,'linear');
+		});
+		//copyrigh
+		$('.copyright').fadeOut(300,'linear', function () {
+			$('.copyright').fadeIn(888,'linear');
+		})
+		//
+		lastIndex = newIndex;
+	}
+	/*
+	$('.info img').load(function () {
+		$(this).fadeIn();
+	});
+	*/
+	$('.nav span').click(function () {
+		var index = parseInt($(this).attr('data-target'));
+		changeTab(index);
+	});
+	//init
+	$('#b0').fadeIn(888,'linear', function () {
+		$('#backdrop').fadeIn(888,'linear');
+		$('.copyright').fadeIn(888,'linear');
+	});
+});
+	</script>
 </body>
 </html>
